@@ -1,0 +1,11 @@
+#Comiled From Source#
+#####################
+*.o
+*.lst
+*.d
+*.eep
+*.elf
+*.lss
+*.map
+*.sym
+
