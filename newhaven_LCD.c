@@ -13,7 +13,7 @@
 *   Date: 6/29/2014
 *
 */
-Another Commit at Line  16
+
 //Frequency defined as 16Mhz in makefile
 #include <avr/io.h>
 #include <stdio.h>
@@ -23,12 +23,11 @@ Another Commit at Line  16
 //#define F_CPU 16000000
 #include <util/delay.h>
 
-one more at 25
-//Util.c and Util.h are found /Documents/projects/AVR/support_files/
+
 #include "util.h"
 
 #include "lcd_parallel.h"
-//#include "../support_files/custom_char.h"
+//Double check for custom_char.h
 #include "myutils.h"
 #include "lcd.c"
 
