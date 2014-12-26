@@ -25,11 +25,9 @@
 
 
 #include "util.h"
-
-#include "lcd_parallel.h"
-//Double check for custom_char.h
-#include "myutils.h"
-#include "lcd.c"
+#include "lcd_parallel.h"	//LCD Communications Library
+#include "myutils.h" 		//Utils for LCD library
+#include "lcd.c"			//Macros for bike display
 
 volatile uint16_t timer_val =0;
 
@@ -49,7 +47,7 @@ ISR(TIMER1_CAPT_vect ){
  	int power =23;
  	DDRC &= (0x01 << PC5);
  	PORTC =(0x01 << PC5);
- 	config_ICP();
+ 	config_ICP();  //Input capture
  	sei();
 
 	LCDInit(0);
