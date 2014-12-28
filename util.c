@@ -94,7 +94,7 @@ void config_ICP(){
 //TCCR1A 
 	//COM1A:B Select Port Operation -- 00 Normal Port Operation
 	//WGM1:0 PWM Operation -- 00 Normal Port Operation
-	TCCR1A |= (0x1<<WGM13)|(0x1<<WGM12);
+	TCCR1A &= (0x1<<WGM13)|(0x1<<WGM12);
 //TCCR1B
 	//ICNC1 Input Capture Noise Canceler -- 1 
 	//ICES1 Edge Select -- 1 Rising Edge
@@ -118,6 +118,10 @@ void config_ICP(){
 int calc_speed(uint16_t timer_val){
 	static double previous_val;
 	static double average;
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of d7d3e66... Updated ICP and minor mods to lcd.c
 
 }
 //This function should be called after detecting 0x7E 
