@@ -118,8 +118,6 @@ void config_ICP(){
 int calc_speed(uint16_t timer_val){
 	static double previous_val;
 	static double average;
-     average ++;
-     previous_val ++;
 
 }
 //This function should be called after detecting 0x7E 

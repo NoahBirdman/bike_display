@@ -57,7 +57,7 @@ ISR(TIMER1_CAPT_vect ){
 	
 	
 	 while(1){
-		update_speed(timer_val);
+		//update_speed(timer_val);
 		update_dist(distance);
 		update_batt(charge);
 		update_pow(power);

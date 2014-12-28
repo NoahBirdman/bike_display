@@ -25,7 +25,7 @@ void bike_screen(){
 //Update speed at position on screen
 void update_speed(uint16_t speed){
 	static char msg[20];
-	sprintf(msg, "%x msg", speed);
+	sprintf(msg, "%d msg", speed);
 	LCDGotoXY(6,0);
 	LCDWriteString(msg);
 
