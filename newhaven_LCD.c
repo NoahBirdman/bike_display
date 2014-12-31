@@ -29,7 +29,7 @@
 #include "myutils.h" 		//Utils for LCD library
 #include "lcd.c"			//Macros for bike display
 
-volatile uint16_t timer_val =0;
+volatile int timer_val =0;
 
 ISR(TIMER1_CAPT_vect ){
 	timer_val = 0;
@@ -41,7 +41,7 @@ ISR(TIMER1_CAPT_vect ){
 
  int main(){
 
- 	int speed =20;
+ 	int speed =0x1FFF;
  	uint16_t distance =0x0F;
  	int charge =22;
  	int power =23;
@@ -55,14 +55,16 @@ ISR(TIMER1_CAPT_vect ){
 	_delay_ms(1);
 	bike_screen();
 	
+
 	
 	 while(1){
-		//update_speed(timer_val);
+	 	speed += 500;
+		update_speed(timer_val);
 		update_dist(distance);
 		update_batt(charge);
 		update_pow(power);
 
-		_delay_ms(100);
+		_delay_ms(50);
 	}
 
 return 0;

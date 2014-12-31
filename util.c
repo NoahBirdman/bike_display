@@ -118,10 +118,6 @@ void config_ICP(){
 int calc_speed(uint16_t timer_val){
 	static double previous_val;
 	static double average;
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of d7d3e66... Updated ICP and minor mods to lcd.c
 
 }
 //This function should be called after detecting 0x7E 
